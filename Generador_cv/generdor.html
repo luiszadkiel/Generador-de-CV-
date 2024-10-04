@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curricreate</title>
+    <link rel="stylesheet" href="CSS.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="sidebar" class="d-flex flex-column" style="height: 100vh;">
+        <h3 class="text-white text-center mb-5">
+            <a class="text-white" href="index.html">
+                <img src="recursos_img/home.png" alt="Icono Casita" style="width: 38px; height: 38px; vertical-align: middle;"></a> Menú
+        </h3>
+        <ul class="list-unstyled">
+            <li class="mb-4 text-center"><a class="text-white" href="generdor.html">Crear un nuevo CV</a></li>
+            <li class="mb-4 text-center"><a class="text-white" href="info.html">Información de la página</a></li>
+        </ul>
+        <h6 class="text-light text-center font-weight-bold mt-auto custom-style">CURRICREATE.</h6>
+    </div>
+
+    <div class="container">
+        <div class="row text-center bg-light-transparent text-warning mt-5">
+            <h1>GENERADOR CV</h1>
+        </div>
+    </div>
+
+    
+
+    <div class=" row container mt-5">
+        <div class="row">
+            <div class="col-2">
+                <input type="text" class="form-control" id="nombre-pr" placeholder="Introduce nombre">
+            </div>
+    
+            <div class="col-2">
+                <input type="text" class="form-control" id="titulo-pr" placeholder="Introduce Titulo">
+            </div>
+    
+            <div class="col-2">
+                <input type="email" class="form-control" placeholder="Introduce Correo">
+            </div>
+    
+            <div class="col-2">
+                <input type="text" class="form-control" placeholder="Introduce Telefono">
+            </div>
+    
+            <div class="col-2">
+                <input type="date" class="form-control" placeholder="Fecha de Nacimiento">
+            </div>
+    
+            <div class="col-2">
+                <input type="url" class="form-control" placeholder="Enlace de LinkedIn">
+            </div>
+
+            <div class="col-6">
+                <input type="file" class="form-control mt-5" id="profile-photo" accept=".png, .jpg, .jpeg, .gif">
+            </div>
+
+            <div class="col-6">
+                <input type="text" id="resun" class="form-control  mt-5" placeholder="Introduce una breve introduccion a tu CV">
+            </div>
+
+           
+
+        </div>
+    </div>
+
+    <div class="container mt-5 border-black bg-light-transparent cuadrado justify-content-start" id="skills-container" style="overflow-x: auto; white-space: nowrap;">    
+        <div class="row d-flex mt-4">
+            <div class="col">
+                <input type="text" class="form-control" id="skill-name" placeholder="Nombre del Skill">
+            </div>
+            <div class="col">
+                <span id="estrellas-skill">
+                    <p class="clasificacion">
+                        <input id="radio1" type="radio" name="estrellas_skill" value="5">
+                        <label for="radio1">&#9733;</label>
+                        <input id="radio2" type="radio" name="estrellas_skill" value="4">
+                        <label for="radio2">&#9733;</label>
+                        <input id="radio3" type="radio" name="estrellas_skill" value="3">
+                        <label for="radio3">&#9733;</label>
+                        <input id="radio4" type="radio" name="estrellas_skill" value="2">
+                        <label for="radio4">&#9733;</label>
+                        <input id="radio5" type="radio" name="estrellas_skill" value="1">
+                        <label for="radio5">&#9733;</label>
+                    </p>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn bg-light me-5" id="add-skill-btn"> 
+            <img src="recursos_img/boton_+.png" alt="Icono" style="width: 38px; height: 38px; vertical-align: middle;"> 
+            AGREGAR
+        </button>
+    </div>
+    
+    
+    
+
+    
+
+    <div class="container mt-5 border-black bg-light-transparent cuadrado justify-content-start" id="software-container">    
+        <div class="row d-flex mt-4">
+            <div class="col">
+                <input type="text" class="form-control" id="software-name" placeholder="Agregar Software">
+            </div>
+            <div class="col">
+                <span id="estrellas-software">
+                    <p class="clasificacion">
+                        <input id="radio6" type="radio" name="estrellas_software" value="5">
+                        <label for="radio6">&#9733;</label>
+                        <input id="radio7" type="radio" name="estrellas_software" value="4">
+                        <label for="radio7">&#9733;</label>
+                        <input id="radio8" type="radio" name="estrellas_software" value="3">
+                        <label for="radio8">&#9733;</label>
+                        <input id="radio9" type="radio" name="estrellas_software" value="2">
+                        <label for="radio9">&#9733;</label>
+                        <input id="radio10" type="radio" name="estrellas_software" value="1">
+                        <label for="radio10">&#9733;</label>
+                    </p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn bg-light me-5" id="btn-diomas"> 
+          <img src="recursos_img/boton_+.png" alt="Icono" style="width: 38px; height: 38px; vertical-align: middle;"> 
+          AGREGAR
+        </button>
+    </div>
+
+    <div class="container mt-5 border-black bg-light-transparent cuadrado justify-content-start" id="languages-container">    
+        <div class="row d-flex mt-4">
+            <div class="col">
+                <input type="text" class="form-control" id="language-name" placeholder="Idioma">
+            </div>
+            <div class="col">
+                <span id="estrellas-languages">
+                    <p class="clasificacion">
+                        <input id="radio11" type="radio" name="estrellas_languages" value="5">
+                        <label for="radio11">&#9733;</label>
+                        <input id="radio12" type="radio" name="estrellas_languages" value="4">
+                        <label for="radio12">&#9733;</label>
+                        <input id="radio13" type="radio" name="estrellas_languages" value="3">
+                        <label for="radio13">&#9733;</label>
+                        <input id="radio14" type="radio" name="estrellas_languages" value="2">
+                        <label for="radio14">&#9733;</label>
+                        <input id="radio15" type="radio" name="estrellas_languages" value="1">
+                        <label for="radio15">&#9733;</label>
+                    </p>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn bg-light me-5 " id="idioo"> 
+          <img src="recursos_img/boton_+.png" alt="Icono" style="width: 38px; height: 38px; vertical-align: middle;"> 
+          AGREGAR
+        </button>
+    </div>
+    <div class="container mt-5 border-black bg-light-transparent cuadrado justify-content-start pb-4" id="experience-container" style="overflow-x: auto; overflow-y: hidden; white-space: nowrap; display: flex; max-width: 100%;">
+        <div class="row d-flex mt-4" style="flex-wrap: nowrap; display: flex;">
+            <div class="col mt-4" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <input type="text" class="form-control" placeholder="Experiencia Laboral" id="estedelaborar">
+            </div>
+    
+            <div class="col" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <p class="mb-0 text-center">Fecha de inicio</p>
+                <input type="date" class="form-control" id="datalaborainicio">
+            </div>
+    
+            <div class="col" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <p class="mb-0 text-center">Fecha de Finalización</p>
+                <input type="date" class="form-control" id="laboralfin">
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn bg-light me-5" id="add-experience-btn"> 
+            <img src="recursos_img/boton_+.png" alt="Icono" style="width: 38px; height: 38px; vertical-align: middle;"> 
+            AGREGAR
+        </button>
+    </div>
+    
+    
+    
+    <div class="container mt-5 border-black bg-light-transparent cuadrado justify-content-start pb-4" id="education-container" style="overflow-x: auto; overflow-y: hidden; white-space: nowrap; display: flex; max-width: 100%;">
+        <div class="row d-flex mt-4" style="flex-wrap: nowrap; display: flex;">
+            <div class="col mt-4" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <input type="text" class="form-control" id="Educaciónasd" placeholder="Educación">
+            </div>
+    
+            <div class="col" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <p class="mb-0 text-center">Fecha de inicio</p>
+                <input type="date" class="form-control" id="Educacióndateinicoi">
+            </div>
+    
+            <div class="col" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <p class="mb-0 text-center">Fecha de Finalización</p>
+                <input type="date" class="form-control" id="Educacióndatefin">
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn bg-light me-5" id="add-education-btn">
+            <img src="recursos_img/boton_+.png" alt="Icono" style="width: 38px; height: 38px; vertical-align: middle;">
+            AGREGAR
+        </button>
+    </div>
+    
+    <div class="container mt-5 border-black bg-light-transparent cuadrado justify-content-start pb-4" id="certifications-container" style="overflow-x: auto; overflow-y: hidden; white-space: nowrap; display: flex; max-width: 100%;">
+        <div class="row d-flex mt-4" style="flex-wrap: nowrap; display: flex;">
+            <div class="col mt-4" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <input type="text" class="form-control" placeholder="Certificaciones" id="Certificacioneert234">
+            </div>
+    
+            <div class="col" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <p class="mb-0 text-center">Fecha de inicio</p>
+                <input type="date" class="form-control" id="Certificacioneert234Inicio">
+            </div>
+    
+            <div class="col" style="min-width: 200px; display: flex; flex-direction: column; margin-right: 10px;">
+                <p class="mb-0 text-center">Fecha de Finalización</p>
+                <input type="date" class="form-control" id="Certificacioneert234Fin">
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn bg-light me-5" id="add-certification-btn">
+            <img src="recursos_img/boton_+.png" alt="Icono" style="width: 38px; height: 38px; vertical-align: middle;">
+            AGREGAR
+        </button>
+    </div>
+    
+
+    <div class="row flex-row">
+        <div class="col d-flex justify-content-center">
+            <button type="button" class="btn btn-primary mt-5 mb-5" id="generarcv">GENERAR CV</button>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS, Popper.js y jQuery (opcional para ciertos componentes interactivos) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JavaScript.js"></script>
+
+
+
+    <div class="container mb-4">
+        <div class="row text-center bg-light-transparent text-white mt-5">
+            <h1 class='text-warning text-center '>Listas de CV</h1>
+        </div>
+    </div>
+
+
+     <!-- Primera mitad de la linea   PARTE donde va la info personal-->
+           <!-- Primera mitad de la linea   PARTE donde va la info personal-->
+
+                <!-- Primera mitad de la linea   PARTE donde va la info personal-->
+ 
+                <div class="row mb-4">
+                    <div class="col" style="background-color: #343a40;">
+                        <div class="row" id="mitad-linea-info">
+                            <div class="col">
+                                <div class="row">
+                                    <p class="text-white" id="pnombrecv"></p>
+                                </div>
+                                <div class="row">
+                                    <p id="titulocv" class="text-white"></p>
+                                </div>
+                                <div class="row mt-2">
+                                    <img id="preview-image" src="" alt="Image preview" style="max-width: 70%;">
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white" id="Personal-Info" style="background-color: #1e2225;"></h6>
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white">Email</h6>
+                                    <p class="text-white" id="Email"></p>
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white">Phone</h6>
+                                    <p class="text-white" id="Phone"></p>
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white">Date of birth</h6>
+                                    <p class="text-white" id="Datebirth"></p>
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white">Enlace de LinkedIn</h6>
+                                    <p class="text-white" id="Linkedln"></p>
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white" style="background-color: #1e2225;">Skills</h6>
+                                    <div class="text-white" id="skill"></div>
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white" style="background-color: #1e2225;">Software</h6>
+                                    <div class="text-white" id="Software"></div>
+                                </div>
+                                <div class="row">
+                                    <h6 class="text-white" style="background-color: #1e2225;">Idiomas</h6>
+                                    <div class="text-white" id="idiomas"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-6 bg-light-transparent">
+                        <div class="row">
+                            <p id="resumen-cv"></p>
+                        </div>
+                        <div class="row">
+                            <h6 class="bg-dark-transparent text-center " style="background-color: #bdbdbd;" >Work History</h6>
+                            <div id="fecha-work"></div>
+                            <div id="info-work"></div>
+                        </div>
+                        <div class="row">
+                            <h6 class="bg-dark-transparent text-center" style="background-color: #bdbdbd;">Education</h6>
+                            <div id="fecha-Education"></div>
+                            <div id="info-Education"></div>
+                        </div>
+                        <div class="row">
+                            <h6 class="bg-dark-transparent text-center" style="background-color: #bdbdbd;">Certificate</h6>
+                            <div id="fecha-Certificate"></div>
+                            <div id="info-Certificate"></div>
+                        </div>
+                    </div>
+                </div>
+                
+
+</div>
+
+
+
+<script>
+    document.getElementById("generarcv").addEventListener("click", function() {
+        // Capturar datos de ejemplo
+        const nombre = document.getElementById("nombre-pr").value;
+        const titulo = document.getElementById("titulo-pr").value;
+        const correo = document.querySelector("input[type='email']").value;
+        const telefono = document.querySelector("input[placeholder='Introduce Telefono']").value;
+        const fechaNacimiento = document.querySelector("input[type='date']").value;
+        const linkedin = document.querySelector("input[type='url']").value;
+
+        // Ejemplo de lo que puedes hacer con los datos, aquí simplemente los mostramos en la consola
+        
+        const nombrepr = document.getElementById("pnombrecv");
+        const titulocv = document.getElementById("titulocv");
+        const Email = document.getElementById("Email");
+        const Phone = document.getElementById("Phone");
+        const Datebirth = document.getElementById("Datebirth");
+        const Linkedln = document.getElementById("Linkedln");
+        
+        
+        nombrepr.textContent = nombre || 'Nombre no disponible';
+        titulocv.textContent= titulo || 'Sin Titulo';
+        Email.textContent= correo || 'Correo no Disponible';
+        Phone.textContent= telefono || 'Telefono no Disponible';
+        Datebirth.textContent= fechaNacimiento || 'Fecha de Nacimeinto no Disponible';
+        Linkedln.textContent= linkedin || 'Enlace no disponible';
+
+        //resumen cv
+        const resun = document.getElementById("resun").value;
+        const resumen = document.getElementById("resumen-cv");
+        resumen.textContent = resun || 'resumen no disponible resumen no disponible resumen no disponible resumen no disponible resumen no disponible';
+
+ // Capturar y mostrar la imagen seleccionada
+ const fileInput = document.getElementById('profile-photo');
+ const file = fileInput.files[0];
+ 
+ if (file) {
+     const reader = new FileReader();
+
+     reader.onload = function(e) {
+         // Asigna el resultado (la URL de la imagen) al src del elemento <img>
+         document.getElementById('preview-image').src = e.target.result;
+     }
+
+     reader.readAsDataURL(file); // Lee el archivo y lo convierte a una URL de datos
+ } else {
+     // Si no se seleccionó una imagen, se puede mostrar un mensaje o una imagen por defecto
+     document.getElementById('preview-image').src = '';
+ }
+
+        // Acción de prueba
+        //alert("¡CV generado para " + nombre + "!");
+
+
+            // Captura los valores de los campos de habilidad
+            const skillName = document.getElementById('skill-name').value;
+            const skillStars = document.querySelector('input[name="estrellas_skill"]:checked')?.value || 0;
+        
+            // Crear objeto con la información de Skills
+            const skillData = { name: skillName, rating: skillStars };
+        
+            // Mostrar Skill en el div correspondiente
+            appendSkill('skill', skillData); // Asegúrate que 'skill' sea el id correcto en tu HTML
+        
+            // Captura los valores de los campos de software
+            const softwareName = document.getElementById('software-name').value;
+            const softwareStars = document.querySelector('input[name="estrellas_software"]:checked')?.value || 0;
+        
+            // Crear objeto con la información de Software
+            const softwareData = { name: softwareName, rating: softwareStars };
+        
+            // Mostrar Software en el div correspondiente
+            appendSoftware('Software', softwareData); // Asegúrate que 'Software' sea el id correcto en tu HTML
+        
+            // Captura los valores de los campos de idioma
+            const languageName = document.getElementById('language-name').value;
+            const languageStars = document.querySelector('input[name="estrellas_languages"]:checked')?.value || 0;
+        
+            // Crear objeto con la información de Idiomas
+            const languageData = { name: languageName, rating: languageStars };
+        
+            // Mostrar Idioma en el div correspondiente
+            appendLanguage('idiomas', languageData); // Asegúrate que 'idiomas' sea el id correcto en tu HTML
+
+        });
+        
+
+        // Función para añadir una habilidad al div correspondiente
+        function appendSkill(divId, skillData) {
+            const div = document.getElementById(divId);
+            if (div) { // Verifica que el div exista
+                const newDiv = document.createElement('div');
+                newDiv.textContent = `${skillData.name} - Estrellas: ${skillData.rating}`;
+                div.appendChild(newDiv);
+            }
+        }
+        
+        // Función para añadir un software al div correspondiente
+        function appendSoftware(divId, softwareData) {
+            const div = document.getElementById(divId);
+            if (div) { // Verifica que el div exista
+                const newDiv = document.createElement('div');
+                newDiv.textContent = `${softwareData.name} - Estrellas: ${softwareData.rating}`;
+                div.appendChild(newDiv);
+            }
+        }
+        
+        // Función para añadir un idioma al div correspondiente
+        function appendLanguage(divId, languageData) {
+            const div = document.getElementById(divId);
+            if (div) { // Verifica que el div exista
+                const newDiv = document.createElement('div');
+                newDiv.textContent = `${languageData.name} - Estrellas: ${languageData.rating}`;
+                div.appendChild(newDiv);
+            }
+        }
+        
+// Event listeners para los botones de "Agregar"
+document.getElementById('add-experience-btn').addEventListener('click', function() {
+    const experienceName = document.getElementById('estedelaborar').value;
+    const experienceStartDate = document.getElementById('datalaborainicio').value;
+    const experienceEndDate = document.getElementById('laboralfin').value;
+
+    appendExperience('fecha-work', 'info-work', { name: experienceName, startDate: experienceStartDate, endDate: experienceEndDate });
+});
+
+document.getElementById('add-education-btn').addEventListener('click', function() {
+    const educationName = document.getElementById('Educaciónasd').value;
+    const educationStartDate = document.getElementById('Educacióndateinicoi').value;
+    const educationEndDate = document.getElementById('Educacióndatefin').value;
+
+    appendEducation('fecha-Education', 'info-Education', { name: educationName, startDate: educationStartDate, endDate: educationEndDate });
+});
+
+document.getElementById('add-certification-btn').addEventListener('click', function() {
+    const certificationName = document.getElementById('Certificacioneert234').value;
+    const certificationStartDate = document.getElementById('Certificacioneert234Inicio').value;
+    const certificationEndDate = document.getElementById('Certificacioneert234Fin').value;
+
+    appendCertification('fecha-Certificate', 'info-Certificate', { name: certificationName, startDate: certificationStartDate, endDate: certificationEndDate });
+});
+
+// Funciones para agregar la información al DOM
+function appendExperience(fechaDivId, infoDivId, experienceData) {
+    const fechaDiv = document.getElementById(fechaDivId);
+    const infoDiv = document.getElementById(infoDivId);
+
+    // Agregar fechas
+    fechaDiv.innerHTML = `Desde: ${experienceData.startDate} Hasta: ${experienceData.endDate}`;
+
+    // Agregar nombre de la experiencia
+    infoDiv.innerHTML = experienceData.name;
+}
+
+function appendEducation(fechaDivId, infoDivId, educationData) {
+    const fechaDiv = document.getElementById(fechaDivId);
+    const infoDiv = document.getElementById(infoDivId);
+
+    // Agregar fechas
+    fechaDiv.innerHTML = `Desde: ${educationData.startDate} Hasta: ${educationData.endDate}`;
+
+    // Agregar nombre de la educación
+    infoDiv.innerHTML = educationData.name;
+}
+
+function appendCertification(fechaDivId, infoDivId, certificationData) {
+    const fechaDiv = document.getElementById(fechaDivId);
+    const infoDiv = document.getElementById(infoDivId);
+
+    // Agregar fechas
+    fechaDiv.innerHTML = `Desde: ${certificationData.startDate} Hasta: ${certificationData.endDate}`;
+
+    // Agregar nombre de la certificación
+    infoDiv.innerHTML = certificationData.name;
+}
+        
+
+
+
+</script>
+
+</body>
+</html>
